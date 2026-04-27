@@ -103,6 +103,55 @@ body::after {
   box-shadow: 0 0 16px rgba(82, 213, 230, 0.14);
 }
 
+.background-wafer {
+  position: fixed;
+  top: 88px;
+  right: 4.5%;
+  width: min(38vw, 480px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.42;
+  background:
+    radial-gradient(circle at 34% 30%, rgba(232, 249, 255, 0.78), rgba(116, 214, 230, 0.2) 22%, rgba(10, 43, 61, 0.12) 48%, rgba(8, 21, 31, 0.04) 72%, transparent 73%),
+    radial-gradient(circle at center, transparent 0 74%, rgba(82, 213, 230, 0.34) 74.4% 75.2%, transparent 75.6%),
+    radial-gradient(circle at center, transparent 0 89%, rgba(242, 141, 73, 0.26) 89.4% 90%, transparent 90.4%),
+    linear-gradient(180deg, rgba(8, 34, 49, 0.58), rgba(7, 18, 27, 0.26));
+  box-shadow:
+    inset 0 0 0 1px rgba(82, 213, 230, 0.2),
+    inset 0 0 44px rgba(82, 213, 230, 0.08),
+    0 0 48px rgba(82, 213, 230, 0.08);
+  overflow: hidden;
+}
+
+.background-wafer::before {
+  content: "";
+  position: absolute;
+  inset: 4.5%;
+  border-radius: 50%;
+  background:
+    repeating-linear-gradient(90deg, rgba(231, 250, 255, 0.26) 0 1px, transparent 1px 22px),
+    repeating-linear-gradient(0deg, rgba(231, 250, 255, 0.24) 0 1px, transparent 1px 22px),
+    radial-gradient(circle at center, rgba(82, 213, 230, 0.1), transparent 68%);
+  box-shadow:
+    inset 0 0 0 1px rgba(231, 250, 255, 0.1),
+    inset 0 0 28px rgba(82, 213, 230, 0.08);
+}
+
+.background-wafer::after {
+  content: "";
+  position: absolute;
+  width: 19%;
+  height: 19%;
+  left: 50%;
+  bottom: -6.5%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: linear-gradient(180deg, rgba(7, 16, 24, 0.94), rgba(8, 20, 29, 0.96));
+  box-shadow: 0 -8px 16px rgba(7, 16, 24, 0.4);
+}
+
 .site-header,
 main,
 .site-footer {
@@ -205,6 +254,11 @@ main {
   padding: 46px 0 18px;
 }
 
+.hero-copy {
+  position: relative;
+  z-index: 1;
+}
+
 .eyebrow,
 .section-index,
 .contact-label {
@@ -235,10 +289,6 @@ main {
   margin: 0;
   font-size: 1.08rem;
   color: var(--muted);
-}
-
-.hero-copy {
-  position: relative;
 }
 
 .hero-copy::after {
@@ -300,6 +350,8 @@ main {
 
 .hero-visual {
   align-content: start;
+  position: relative;
+  z-index: 1;
 }
 
 .glass-card {
