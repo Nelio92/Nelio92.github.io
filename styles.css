@@ -190,7 +190,7 @@ main {
 
 .hero h1 {
   margin: 14px 0 18px;
-  font-size: clamp(2.35rem, 4.6vw, 4.1rem);
+  font-size: clamp(1.45rem, 2vw, 1.65rem);
   line-height: 1.02;
   max-width: none;
   white-space: nowrap;
