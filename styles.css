@@ -169,8 +169,8 @@ main {
 
 .hero-copy-top {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(240px, 300px);
-  gap: 26px;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 380px);
+  gap: 32px;
   align-items: center;
 }
 
@@ -212,10 +212,10 @@ main {
 
 .hero-portrait {
   margin: 0;
-  padding: 12px;
+  padding: 14px;
   justify-self: end;
   width: 100%;
-  max-width: 300px;
+  max-width: 380px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(243, 237, 230, 0.94));
   border-color: rgba(125, 137, 146, 0.16);
 }
@@ -833,7 +833,7 @@ main {
   .hero-portrait {
     order: -1;
     justify-self: start;
-    max-width: 280px;
+    max-width: 320px;
   }
 }
 
@@ -866,7 +866,7 @@ main {
 
   .hero-portrait {
     justify-self: center;
-    width: min(300px, 100%);
+    width: min(340px, 100%);
   }
 
   .lab-scene,
